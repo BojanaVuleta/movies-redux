@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import MovieSearch from "./MovieSearch";
 
 
 const Header = () => {
@@ -23,6 +24,7 @@ const Header = () => {
             </Link>
           </li>
         </ul>
+        <MovieSearch/>
       </header>
     </div>
   );

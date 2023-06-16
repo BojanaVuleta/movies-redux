@@ -1,21 +1,19 @@
 import { useDispatch } from "react-redux";
-import { setSearchName, setSearchDuration } from "../store/movies/slice";
+import { setSearchTitle} from "../store/movies/slice";
 
-export const MovieSearch = () => {
+const MovieSearch = () => {
   const dispatch = useDispatch();
 
-  const handleSearchName = (event) => {
-    dispatch(setSearchName(event.target.value));
+  const handleSearchTitle = (event) => {
+    dispatch(setSearchTitle(event.target.value));
   };
 
-  const handleSearchDuration = (event) => {
-    dispatch(setSearchDuration(event.target.value));
-  };
 
   return (
     <span>
-      Name: <input type="text" onChange={handleSearchName} />
-      Duration: <input type="text" onChange={handleSearchDuration} />
+      Title Search: <input type="text" onChange={handleSearchTitle} />
+    
     </span>
   );
 };
+export default MovieSearch;
